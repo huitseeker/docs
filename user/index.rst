@@ -12,6 +12,7 @@ Contents:
    advancedsetup
    features
    /tutorials/index
+   howto
    faq
    community
    testingframeworks
