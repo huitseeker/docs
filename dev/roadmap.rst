@@ -40,44 +40,46 @@ __ http://www.assembla.com/spaces/scala-ide/tickets/1000867
 
 **Milestone 2** - end of July 2012
 
-* ScalaTest support - *Chee Seng Chua, Bill Venners* - |progress| `(watch the demo!)`__
+* `ScalaTest support`__ - *Chee Seng Chua, Bill Venners* - |done| `(watch the demo!)`__
 * `Implicit hyperlinking`__ - *Typesafe Team* - `#10001002`__ - |done|
-* Infer Type of Structured Selection - *Typesafe Team* - |done|
-* Create a worksheet (like a REPL but in an editor) - *Typesafe team* - `#1000865`__ |progress|
+* `Infer Type of Structured Selection`__ - *Typesafe Team* - |done|
+* `Create a worksheet (like a REPL but in an editor)`__ - *Typesafe team* - `#1000865`__ |progress|
 * Add support for Find References - *Typesafe team* - `#1000868`__ - |progress|
-* Improve dependency tracking - *Typesafe team* - `#1000869`__
-* Scala 2.10 support (e.g., macros) -  *Typesafe team* |done|
+* Scala 2.10 support (e.g., macros, string interpolation) -  *Typesafe team* |done|
 * `New Scala debugger`__ - *Typesafe team* - |progress|
 * `New refactorings`__ - *Michael Holzer, Mirko Stocker* - `#1000960`__ - |done|
 * `Source generators`__ - *Michael Holzer* - `#1001018`__ - |done|
+* `Common update site for Scala plugins (a.k.a, Scala IDE Ecosystem)`__ - |done|
 
+__ http://scala-ide.org/blog/scalatest-ecosystem.html
 __ http://skillsmatter.com/podcast/scala/scalatest-scalamock-subcut
 __ http://scala-ide.org/docs/helium/features/implicit-hyperlinking/index.html
 __ http://www.assembla.com/spaces/scala-ide/tickets/1001002
-__ http://www.assembla.com/spaces/scala-ide/tickets/1000862
-__ http://www.assembla.com/spaces/scala-ide/tickets/1000863
+__ http://scala-ide.org/docs/helium/features/show-type.html
+__ http://github.com/dragos/scala-worksheet
 __ http://www.assembla.com/spaces/scala-ide/tickets/1000865
 __ http://www.assembla.com/spaces/scala-ide/tickets/1000868
-__ http://www.assembla.com/spaces/scala-ide/tickets/1000869
 __ http://scala-ide.org/docs/helium/features/scaladebugger/index.html
-__ http://www.assembla.com/spaces/scala-ide/tickets/1000629
 __ http://scala-ide.org/docs/helium/features/new-refactoring/index.html
 __ http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000960
 __ http://scala-ide.org/docs/helium/features/source-generators/index.html
 __ http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001018
+__ http://scala-ide.org/download/ecosystem.html
 
 **Helium release**
 
-* Eclipse Juno (4.2) support - *Eric Molitor* - Milestone 2? |progress|
+* Eclipse Juno (4.2) support - *Eric Molitor* - `#1000988`__ |progress|
 * Switch to vanilla Sbt (0.13) - |progress|
-* Common update site for Scala plugins - |progress|
+* Improve dependency tracking - *Typesafe team* - `#1000869`__
 
+__ http://www.assembla.com/spaces/scala-ide/tickets/1000988
+__ http://www.assembla.com/spaces/scala-ide/tickets/1000869
 
 
 Lithium (next major release)
 -------------------------------
 
-* Create an abstraction layer with the Scala compiler - *Typesafe team* - `#1000862`__ 
+* Create an abstraction layer with the Scala compiler - *Typesafe team* - `#1000861`__, `#1000862`__
 * Use the Scala model for the Outline view - *Typesafe team* - `#1000863`__
 * Create a real Scala Editor (with all completion, indentation, formatting, ... support) - *Typesafe team* - `#1000860`__
 * Add support for Type Hierarchy (both in JDT and Scala specific) - *Typesafe team* - `#1000870`__
@@ -85,6 +87,9 @@ Lithium (next major release)
 * Add support Call Hierarchy - *Typesafe team* - `#1000872`__
 * Finalize the API in Scala IDE - *Typesafe team* - `#1000873`__
 
+__ http://www.assembla.com/spaces/scala-ide/tickets/1000861
+__ http://www.assembla.com/spaces/scala-ide/tickets/1000862
+__ http://www.assembla.com/spaces/scala-ide/tickets/1000863
 __ http://www.assembla.com/spaces/scala-ide/tickets/1000860
 __ http://www.assembla.com/spaces/scala-ide/tickets/1000870
 __ http://www.assembla.com/spaces/scala-ide/tickets/1000871
@@ -99,6 +104,7 @@ __ http://www.assembla.com/spaces/scala-ide/tickets/1000873
 * Integrate a SBT-console - *Sandro Grzicić* (GSoC)
 * Smart Quick Fixes - *Ivan Kuraj* (GSoC)
 
+__ http://www.assembla.com/spaces/scala-ide/tickets/1000629
 __ http://www.assembla.com/spaces/scala-ide/tickets/1000866
 
 .. role:: raw-html(raw)
