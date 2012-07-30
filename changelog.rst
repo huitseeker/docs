@@ -4,11 +4,15 @@ Changelog
 2.1 (master) - codename Helium 
 ------------------------------
 
-M2 (unreleased)
-...............
+2.1.0-rc01 (unreleased)
+.......................
 
-* `Implicit hyperlinking`__ - `#1001002`_
-* `Infer Type of Structured Selection`__
+
+M2 (released: 2012-07-31)
+.........................
+
+* `Implicit hyperlinking`__ - `#1001002`_, `#1000209`
+* `Infer Type of Structured Selection`__ - `#3214`_
 * Missing Scala library in run classpath - `#1000786`_, `#1000919`_, `#1001022`_
 * Provide reusable sdt.core.tests bundle - `#1001080`_
 * Problem deleting files on Windows - `#1000909`_, `#1000923`_
@@ -21,10 +25,40 @@ M2 (unreleased)
 * Warn the user if JDT Weaving is disabled - `#1001104`_
 * Fixed NullPointerException occurring when using the ``New Application`` wizard - `#1000797`_, `#1001115`_
 * Fixed Assertion exception: ``Marker property value too long`` - `#1001107`_
+* Several improvements for ``Organize Imports`` refactoring - `#1000846`_, `#1000857`_, `#1001004`_, `#1001008`_, `#1001085`_, `#1001122`_, `#1001124`_, `#1001126`_, `#1001127`_, `#1001155`_, `#1001160`_, `#1001028`_, `#1001073`_
+* Several improvements for ``Rename`` refactoring - `#1000884`_, `#1000959`_, `#1001031`_, `#1001049`_, `#1001081`_, `#1001117`_, `#1001118`_, `#1001148`_, `#1001150`_, `#1001177`_, `#1000981`_, `#1001059`_
+* Several improvements in ``Move`` refactoring - `#1001079`_, `#1001123`_, `#1001147`_, `#1000980`_
+* Assignment operators and extract local refactoring don't mix wel - `#1001110`_
+* Fixed ``ConcurrentModificationException`` when starting Eclipse - `#1000941`_
+* Added ``scala-actors`` jar in Scala 2.10 library and made the class path container resilient to non-found items (``scala-dbc`` is gone in 2.10) - `#1000979`_
+* Updated syntax coloring for Scala 2.10, i.e., macro keyword and string interpolation literals - `#1001012`_
+* Fixed *mark occurrences* highlights type aliases in Scala 2.10 - `#1001069`_
+* Extract Method messes up anonymous class definition - `#1001111`_
+* Redirection of stdout and std err to the log file should be optional - `#1001133`_
+* Initial support for Find References - `#1001146`_, `#1001167`_, `#1000063`_, `#1000067`_, `#1001084`_, `#1001135`_
+* Added support for parameter names in method completion - `#1000534`_
+* Semantic highlighting should have its own background job - `#1001016`_, `#1000943`_
+* `Create Source generation actions`__ - `#1001018`_
+* Add an option to stop building dependent projects when there are compilation errors - `#1000893`_
+* Quickfix to expand case-class bindings in pattern-matching - `#1000982`_
+* Add IIndexedValue support to split large arrays in Variables view - `#1001009`_
+* Editor improvements: surround selection with ``{ (or (,",[)`` - `#1001010`_, `#1001034`_
+* sbt builder is too restrictive when looking for the scala library jar - `#1000729`_, `#1001027`_, `#1000987`_
+* Improve Scala Debugger to no more rely of an launched JDT debug session - `#1001130`_
+* Could not find or load main class ``scala.tools.nsc.MainInterpreter`` - `#1001157`_
+* Enable using the Scala debugger for applications with 'Equinox weaving' - `#1001158`_
+* Add import not working correctly in Scala 2.10 - `#1001161`_
+* Abstract val/var not shown in the outline - `#1001173`_
+* Missing implementation of abstract val/var not reported in Java class - `#1001174`_
+* Exception when deleting a Scala project - `#1001058`_
+* Java debug broken when Scala debug enabled - `#1000995`_
+* False error markers set in editor window - `#1000976`_
 
 __ http://scala-ide.org/docs/helium/features/implicit-hyperlinking/index.html
 .. _#1001002: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001002
+.. _#1000209: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000209
 __ http://scala-ide.org/docs/helium/features/show-type.html
+.. _#3214: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/3214
 .. _#1000972: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000972
 .. _#1000800: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000800
 .. _#1000881: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000881
@@ -43,9 +77,75 @@ __ http://scala-ide.org/docs/helium/features/show-type.html
 .. _#1001022: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001022
 .. _#1001080: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001080
 .. _#1001104: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001104
+.. _#1001108: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001108
 .. _#1000797: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000797
 .. _#1001115: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001115
 .. _#1001107: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001107
+.. _#1000846: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000846
+.. _#1000857: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000857
+.. _#1001004: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001004
+.. _#1001008: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001008
+.. _#1001085: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001085
+.. _#1001122: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001122
+.. _#1001124: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001124
+.. _#1001126: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001126
+.. _#1001127: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001127
+.. _#1001155: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001155
+.. _#1001160: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001160
+.. _#1001028: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001028
+.. _#1001073: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001073
+.. _#1000884: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000884
+.. _#1000959: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000959
+.. _#1001031: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001031
+.. _#1001049: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001049
+.. _#1001081: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001081
+.. _#1001117: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001117
+.. _#1001118: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001118
+.. _#1001148: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001148
+.. _#1001150: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001150
+.. _#1001177: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001177
+.. _#1000981: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000981
+.. _#1001059: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001059
+.. _#1001079: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001079
+.. _#1001123: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001123
+.. _#1001147: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001147
+.. _#1000980: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000980
+.. _#1001110: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001110
+.. _#1000941: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000941
+.. _#1000979: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000979
+.. _#1001012: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001012
+.. _#1001069: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001069
+.. _#1001111: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001111
+.. _#1001133: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001133
+.. _#1001146: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001146
+.. _#1001167: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001167
+.. _#1000063: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000063
+.. _#1000067: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000067
+.. _#1001084: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001084
+.. _#1001135: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001135
+.. _#1000534: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000534
+.. _#1001016: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001016
+.. _#1000943: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000943
+__ http://scala-ide.org/docs/helium/features/source-generators/index.html
+.. _#1001018: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001018
+.. _#1000893: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000893
+.. _#1000982: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000982
+.. _#1001009: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001009
+.. _#1001010: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001010
+.. _#1001034: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001034
+.. _#1000729: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000729
+.. _#1001027: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001027
+.. _#1000987: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000987
+.. _#1001130: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001130
+.. _#1001157: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001157
+.. _#1001158: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001158
+.. _#1001161: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001161
+.. _#1001173: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001173
+.. _#1001174: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001174
+.. _#1001058: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1001058
+.. _#1000995: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000995
+.. _#1000976: http://scala-ide-portfolio.assembla.com/spaces/scala-ide/tickets/1000976
+
 
 M1 (released: 2012-04-13)
 .........................
